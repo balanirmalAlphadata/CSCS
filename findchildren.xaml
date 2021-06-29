@@ -1,0 +1,238 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="findchildren" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="444,1150" sap2010:WorkflowViewState.IdRef="findchildren_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="42">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="findchildren" sap:VirtualizedContainerService.HintSize="454,1045" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="result" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="child" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT '" sap:VirtualizedContainerService.HintSize="412,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="India">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="50">
+          <x:String>Please Select</x:String>
+          <x:String>Afghanistan</x:String>
+          <x:String>Aland Islands</x:String>
+          <x:String>Albania</x:String>
+          <x:String>Algeria</x:String>
+          <x:String>American Samoa</x:String>
+          <x:String>Andorra</x:String>
+          <x:String>Angola</x:String>
+          <x:String>Anguilla</x:String>
+          <x:String>Antarctica</x:String>
+          <x:String>Antigua-Barbuda</x:String>
+          <x:String>Argentina</x:String>
+          <x:String>Armenia</x:String>
+          <x:String>Aruba</x:String>
+          <x:String>Australia</x:String>
+          <x:String>Austria</x:String>
+          <x:String>Azerbaijan</x:String>
+          <x:String>Bahamas</x:String>
+          <x:String>Bahrain</x:String>
+          <x:String>Bangladesh</x:String>
+          <x:String>Barbados</x:String>
+          <x:String>Belarus</x:String>
+          <x:String>Belgium</x:String>
+          <x:String>Belize</x:String>
+          <x:String>Benin</x:String>
+          <x:String>Bermuda</x:String>
+          <x:String>Bhutan</x:String>
+          <x:String>Bolivia</x:String>
+          <x:String>Bonaire-St. Eustatius-Saba</x:String>
+          <x:String>Bosnia-Herzegovina</x:String>
+          <x:String>Botswana</x:String>
+          <x:String>Bouvet Island</x:String>
+          <x:String>Brazil</x:String>
+          <x:String>British Indian Ocean Territory</x:String>
+          <x:String>British Virgin Islands</x:String>
+          <x:String>Brunei</x:String>
+          <x:String>Bulgaria</x:String>
+          <x:String>Burkina Faso</x:String>
+          <x:String>Burma (Myanmar)</x:String>
+          <x:String>Burundi</x:String>
+          <x:String>Cambodia</x:String>
+          <x:String>Cameroon</x:String>
+          <x:String>Canada</x:String>
+          <x:String>Cape Verde Island</x:String>
+          <x:String>Cayman Islands</x:String>
+          <x:String>Central African Republic</x:String>
+          <x:String>Chad</x:String>
+          <x:String>Chile</x:String>
+          <x:String>China</x:String>
+          <x:String>Christmas Island</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c9b964f2-67b9-4e19-876f-f0fba0d19e84" InformativeScreenshot="470c9dbb1fd77550af6401b410cac369" Selector="&lt;html app='chrome.exe' title='Submit Request - Liferay DXP' /&gt;&lt;webctrl id='_com_tinext_dfzc_requestform_portlet_RequestFormPortlet_INSTANCE*' parentid='yui_patched_v3_18_1_1_1624359940222_1136' tag='SELECT' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT '" sap:VirtualizedContainerService.HintSize="412,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="Engine Head Milling Worker">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="50">
+          <x:String>Electronics Physicist</x:String>
+          <x:String>Electronics Tech Medical Equip</x:String>
+          <x:String>Electronics Tech Programmed Mc</x:String>
+          <x:String>Electronics Techncn Broadcast</x:String>
+          <x:String>Electronics Techncn Tv Mntnce</x:String>
+          <x:String>Electronics Techncn Tv Trnsmsn</x:String>
+          <x:String>Electronics Technician</x:String>
+          <x:String>Electronics Technician Telecom</x:String>
+          <x:String>Electronics Technicians</x:String>
+          <x:String>Elementary Science Teacher</x:String>
+          <x:String>Elevator Electrician</x:String>
+          <x:String>Elevator Electrician Assistant</x:String>
+          <x:String>Elevator/Lift Worker</x:String>
+          <x:String>Embroiderer</x:String>
+          <x:String>Embroidering Machine Operator</x:String>
+          <x:String>Embroidering Worker</x:String>
+          <x:String>Emergency Electrician</x:String>
+          <x:String>Employee</x:String>
+          <x:String>Employment Services Clerk</x:String>
+          <x:String>Employment Services Clerks</x:String>
+          <x:String>Endoscopy Technicion</x:String>
+          <x:String>Energy Meter Electrician</x:String>
+          <x:String>Eng</x:String>
+          <x:String>Engine Cylinders Turner</x:String>
+          <x:String>Engine Head Milling Worker</x:String>
+          <x:String>Engine Lathe Machining Tec</x:String>
+          <x:String>Engine Loom Mechanic</x:String>
+          <x:String>Engine Loom Operator</x:String>
+          <x:String>Engine Turner General</x:String>
+          <x:String>Engineer</x:String>
+          <x:String>Engineer Designer</x:String>
+          <x:String>Engineering Manager</x:String>
+          <x:String>Engineering Sce Technician</x:String>
+          <x:String>English Language Teacher/Secdr</x:String>
+          <x:String>Enviroment Engineer</x:String>
+          <x:String>Environment And Puplic Health Specialist</x:String>
+          <x:String>Equip Installation Mech Assist</x:String>
+          <x:String>Equiping Officer</x:String>
+          <x:String>Equipment Superintendent</x:String>
+          <x:String>Equipment/Machines Supervisor</x:String>
+          <x:String>Erection Manager</x:String>
+          <x:String>Excelent Clerk</x:String>
+          <x:String>Exchange Maint Elect Spec Gen</x:String>
+          <x:String>Exchange Maint Elect Specialis</x:String>
+          <x:String>Executive Assistant</x:String>
+          <x:String>Executive Chef</x:String>
+          <x:String>Executive Coord.</x:String>
+          <x:String>Executive Manager</x:String>
+          <x:String>Executive Personal Ass.</x:String>
+          <x:String>Executive Secretary</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="76af1183-409d-4ede-b98c-589c2223a24d" InformativeScreenshot="a1c2a94a6d8aa44822c9c6f5ce951cf2" Selector="&lt;html app='chrome.exe' title='Submit Request - Liferay DXP' /&gt;&lt;webctrl id='_com_tinext_dfzc_requestform_portlet_RequestFormPortlet_INSTANCE*' parentid='yui_patched_v3_18_1_1_1624359940222_1140' tag='SELECT' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:FindChildren Children="[child]" DisplayName="Find Children 'SELECT '" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
+      <ui:FindChildren.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9a70fcb7-3f54-473a-859a-1b4491b29196" InformativeScreenshot="29c6a28cc6fbe05ae08ab3f9d0e8dfab" Selector="&lt;html app='chrome.exe' title='Submit Request - Liferay DXP' /&gt;&lt;webctrl id='_com_tinext_dfzc_requestform_portlet_RequestFormPortlet_INSTANCE*' parentid='yui_patched_v3_18_1_1_1624359940222_1140' tag='SELECT' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:FindChildren.Target>
+    </ui:FindChildren>
+    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412,459" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[child]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="ui:UiElement">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:UiElement" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,325" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="name" DisplayName="Get Attribute 'SELECT '" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+              <ui:GetAttribute.Result>
+                <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
+              </ui:GetAttribute.Result>
+              <ui:GetAttribute.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="92eb455e-09b7-46f7-bda6-77eb92b620e8" InformativeScreenshot="29c6a28cc6fbe05ae08ab3f9d0e8dfab" Selector="&lt;html app='chrome.exe' title='Submit Request - Liferay DXP' /&gt;&lt;webctrl id='_com_tinext_dfzc_requestform_portlet_RequestFormPortlet_INSTANCE*' parentid='yui_patched_v3_18_1_1_1624359940222_1140' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetAttribute.Target>
+            </ui:GetAttribute>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[result]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
